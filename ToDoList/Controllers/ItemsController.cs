@@ -40,7 +40,8 @@ namespace ToDoList.Controllers
         }
 
         public ActionResult Create(){
-            ViewBag.Category = new SelectList(_db.Categories, "CategoryId", "Name");
+            ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Name");
+            
             return View();
         }
 
